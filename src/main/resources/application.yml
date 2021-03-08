@@ -1,0 +1,9 @@
+micronaut:
+  server:
+    port: 8081
+    context-path: /api
+    default-charset: UTF-8
+  application:
+    name: micronautMemLeak
+jackson:
+  property-naming-strategy: KEBAB_CASE
