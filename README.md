@@ -10,3 +10,4 @@
 
 - [Micronaut HTTP Client documentation](https://docs.micronaut.io/latest/guide/index.html#httpClient)
 
+Do Vm Options je třeba přidat -Dio.netty.leakDetectionLevel=paranoid kvůli vzorkování dotazů na chyby

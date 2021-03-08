@@ -3,6 +3,9 @@ micronaut:
     port: 8081
     context-path: /api
     default-charset: UTF-8
+    max-request-size: 50mb
+    multipart:
+      max-file-size: 50mb
   application:
     name: micronautMemLeak
 jackson:

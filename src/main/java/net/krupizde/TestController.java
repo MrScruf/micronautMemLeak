@@ -11,7 +11,7 @@ import io.micronaut.http.server.types.files.StreamedFile;
 
 import javax.inject.Inject;
 import javax.xml.stream.XMLStreamException;
-import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.io.InputStream;
 
 @Controller
@@ -22,7 +22,7 @@ public class TestController {
     @Post("/test-me")
     @Consumes("application/xml")
     @Produces(MediaType.APPLICATION_XML)
-    public FileCustomizableResponseType extractXML(@Body byte[] xml) throws XMLStreamException {
+    public FileCustomizableResponseType extractXML(@Body byte[] xml) throws XMLStreamException, IOException {
         InputStream inpuStream = xmlService.createSumthing(xml);
         return new StreamedFile(inpuStream, MediaType.APPLICATION_XML_TYPE).attach("data.xml");
     }
